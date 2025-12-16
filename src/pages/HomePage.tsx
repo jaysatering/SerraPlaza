@@ -89,7 +89,18 @@ export default function HomePage() {
           formId: "52e1922c-438e-446b-9845-75bf623b620e",
           target: '#hubspot-form-container',
           onFormSubmitted: () => {
-            window.location.href = '/thank-you';
+            // Fire conversion tracking events
+            if (window.gtag) {
+              window.gtag('event', 'conversion', {
+                'send_to': 'G-374937552'
+              });
+            }
+            
+            if (window.fbq) {
+              window.fbq('track', 'Lead');
+            }
+            
+            // Let HubSpot handle the redirect - don't do it manually
           }
         });
       }

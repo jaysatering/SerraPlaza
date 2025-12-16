@@ -15,7 +15,7 @@ export const TRACKING_CONFIG = {
   
   // Client-Side Tracking (Current Setup)
   META_PIXEL_ID: '511510642697274',
-  GA4_MEASUREMENT_ID: 'G-260342425',
+  GA4_MEASUREMENT_ID: 'G-374937552',
 };
 
 /**

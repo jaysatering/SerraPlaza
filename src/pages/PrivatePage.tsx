@@ -378,7 +378,7 @@ export default function PrivatePage() {
           className="editorial-full-height"
         >
           <img 
-            src="https://res.cloudinary.com/dr9hlxnbp/image/upload/v1765858082/Serra_Plaza_Selects82_cts9ks.jpg"
+            src="https://res.cloudinary.com/dr9hlxnbp/image/upload/v1765857513/Serra_Plaza_Selects14_cfqgng.jpg"
             alt="Grand Gimeno"
             className="editorial-full-height-img"
           />

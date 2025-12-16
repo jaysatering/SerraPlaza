@@ -4,7 +4,7 @@ import { ChevronDown } from 'lucide-react';
 import GgLogo from '../components/GgLogo';
 import { initializeTracking } from '../utils/tracking';
 
-const oliveGroveAerial = "https://res.cloudinary.com/dr9hlxnbp/image/upload/v1765857513/Serra_Plaza_Selects14_cfqgng.jpg";
+const oliveGroveAerial = "https://res.cloudinary.com/dr9hlxnbp/image/upload/v1765859034/Serra_Plaza_Selects82_ebhc0o.jpg";
 const pizzaOven = "https://res.cloudinary.com/dr9hlxnbp/image/upload/v1765856956/Serra_Plaza_Selects30_ix3n6x.jpg";
 const oliveCeremony = "https://res.cloudinary.com/dr9hlxnbp/image/upload/v1765856959/Serra_Plaza_Selects86_g5wa6t.jpg";
 

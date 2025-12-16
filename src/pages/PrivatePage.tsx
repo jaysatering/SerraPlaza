@@ -17,7 +17,7 @@ export default function PrivatePage() {
   const heroImageUrl = "https://images.unsplash.com/photo-1738800076744-c37b80b37d31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjB3ZWRkaW5nJTIwbWluaW1hbHxlbnwxfHx8fDE3NjU3ODMyNDV8MA&ixlib=rb-4.1.0&q=80&w=1080";
   const courtyardImageUrl = "https://images.unsplash.com/photo-1721860982031-e1a031beb5f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcGFuaXNoJTIwY291cnR5YXJkJTIwZm91bnRhaW58ZW58MXx8fHwxNzY1NzU3NzUzfDA&ixlib=rb-4.1.0&q=80&w=1080";
   const archImageUrl = "https://images.unsplash.com/photo-1762375164298-2f8f14bd8d36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcmNoaXRlY3R1cmFsJTIwZGV0YWlsJTIwYXJjaHxlbnwxfHx8fDE3NjU3ODMyNDV8MA&ixlib=rb-4.1.0&q=80&w=1080";
-  const culinaryImageUrl = "https://res.cloudinary.com/dr9hlxnbp/image/upload/v1765839039/_AJB3571_ijrgo1.jpg";
+  const culinaryImageUrl = "https://res.cloudinary.com/dr9hlxnbp/image/upload/v1765856956/Serra_Plaza_Selects16_ix49dm.jpg";
 
   const faqItems = [
     {
@@ -315,7 +315,7 @@ export default function PrivatePage() {
                 </p>
               </div>
               <a 
-                href="http://www.jayscatering.com/food-and-drink/the-grand-gimeno-bespoke-menu"
+                href="http://www.jayscatering.com/food-and-drink/the-serra-plaza-bespoke-menu"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cta-button" 

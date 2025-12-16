@@ -1,21 +1,20 @@
-import svgPaths from "../imports/svg-0fuw8ucymm";
+import svgPaths from "../imports/svg-6pr0xqd428";
 
 export default function GgLogo() {
   return (
-    <div className="relative size-full" data-name="GG_Logo_6">
-      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 264 18">
-        <g id="ART">
-          <path d={svgPaths.p246e7b00} fill="var(--fill-0, #669CC4)" id="Vector" />
-          <path d={svgPaths.p14ed9800} fill="var(--fill-0, #669CC4)" id="Vector_2" />
-          <path d={svgPaths.p2b093d00} fill="var(--fill-0, #669CC4)" id="Vector_3" />
-          <path d={svgPaths.p1271da00} fill="var(--fill-0, #669CC4)" id="Vector_4" />
-          <path d={svgPaths.p3fd06c00} fill="var(--fill-0, #669CC4)" id="Vector_5" />
-          <path d={svgPaths.p3005ae80} fill="var(--fill-0, #669CC4)" id="Vector_6" />
-          <path d={svgPaths.p73ef080} fill="var(--fill-0, #669CC4)" id="Vector_7" />
-          <path d={svgPaths.p11788700} fill="var(--fill-0, #669CC4)" id="Vector_8" />
-          <path d={svgPaths.p13500900} fill="var(--fill-0, #669CC4)" id="Vector_9" />
-          <path d={svgPaths.p3b2e2800} fill="var(--fill-0, #669CC4)" id="Vector_10" />
-          <path d={svgPaths.p1f0fa800} fill="var(--fill-0, #669CC4)" id="Vector_11" />
+    <div className="relative size-full" data-name="SP Logo Text Dark">
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 382 53">
+        <g id="SP Logo Text Dark">
+          <path d={svgPaths.p31052a10} fill="var(--color-charcoal)" />
+          <path d={svgPaths.p32d22300} fill="var(--color-charcoal)" />
+          <path d={svgPaths.p37a1400} fill="var(--color-charcoal)" />
+          <path d={svgPaths.p365fd5c0} fill="var(--color-charcoal)" />
+          <path d={svgPaths.p113f0f00} fill="var(--color-charcoal)" />
+          <path d={svgPaths.p1bb39e80} fill="var(--color-charcoal)" />
+          <path d={svgPaths.p3532b400} fill="var(--color-charcoal)" />
+          <path d={svgPaths.p28ac8800} fill="var(--color-charcoal)" />
+          <path d={svgPaths.p5e88300} fill="var(--color-charcoal)" />
+          <path d={svgPaths.p1ee72780} fill="var(--color-charcoal)" />
         </g>
       </svg>
     </div>

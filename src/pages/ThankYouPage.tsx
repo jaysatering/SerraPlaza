@@ -47,7 +47,7 @@ export default function ThankYouPage() {
 
           <div style={{ marginTop: '64px', paddingTop: '48px', borderTop: '1px solid var(--color-border)' }}>
             <p style={{ fontSize: '1rem', color: 'var(--color-charcoal)' }}>
-              The Grand Gimeno Team
+              The Serra Plaza Team
             </p>
           </div>
         </motion.div>

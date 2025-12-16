@@ -22,7 +22,7 @@ export default function PrivatePage() {
   const faqItems = [
     {
       question: "Can we bring our own caterer?",
-      answer: "Grand Gimeno was built by Jay's Catering Collection. All culinary services are provided exclusively by our in-house team to maintain the highest standards of quality and execution."
+      answer: "Serra Plaza was built in partnership with Jay's Catering Collection. All culinary services are provided exclusively by our in-house team to maintain the highest standards of quality, execution, and venue knowledge."
     },
     {
       question: "What is your cancellation policy?",
@@ -30,19 +30,27 @@ export default function PrivatePage() {
     },
     {
       question: "Do you allow outside vendors?",
-      answer: "Yes. You are welcome to work with your preferred florist, photographer, DJ, and other vendors. We'll provide a list of preferred partners who are familiar with the venue."
+      answer: "Yes. You are welcome to work with your preferred florist, photographer, DJ, planner, and other vendors. We'll provide a list of preferred partners who are intimately familiar with the venue."
     },
     {
       question: "Is there parking available?",
-      answer: "Yes. Grand Gimeno offers on-site parking for up to 100 vehicles. We also coordinate with nearby lots for larger events and can arrange valet service."
+      answer: "Yes. Serra Plaza offers ample on-site parking for guests. Additional overflow parking and valet coordination can be arranged if needed."
     },
     {
       question: "Can we see the venue before booking?",
-      answer: "Absolutely. We offer private tours by appointment. Please submit an inquiry and our venue concierge will schedule a personalized walkthrough."
+      answer: "Absolutely. We offer private tours by appointment only. Please submit an inquiry and our venue coordinator will schedule a personalized walkthrough."
     },
     {
       question: "What time can we access the venue?",
-      answer: "Your rental includes 14 hours of access from 10am to midnight. Early access and extended hours can be arranged for an additional fee."
+      answer: "Your rental includes flexible timing with setup beginning three hours before your event start time. Events conclude by midnight. Extended hours can be arranged for an additional fee."
+    },
+    {
+      question: "Can we have amplified music or a live band?",
+      answer: "Yes. We welcome live music and DJs. Courtyard events conclude by 10pm due to noise ordinances. Indoor Grand Salon events can continue until midnight."
+    },
+    {
+      question: "What's included in the venue rental?",
+      answer: "Tables and chairs for 200 guests, vintage furniture collection, market lighting, coordinators, security, and complete privacy with one event at a time."
     }
   ];
 
@@ -154,7 +162,7 @@ export default function PrivatePage() {
             <span className="mono">Private Venue Profile</span>
           </p>
           <h1 className="hero-title">
-            <span className="hero-title-line">The Landmark</span>
+            <span className="hero-title-line">The Plaza</span>
             <span className="hero-title-line">Is Yours.</span>
           </h1>
         </motion.div>
@@ -208,7 +216,7 @@ export default function PrivatePage() {
           className="editorial-image-wrapper"
         >
           <ImageWithFallback 
-            src="https://res.cloudinary.com/dr9hlxnbp/image/upload/v1765839486/KAPSULE_Shawn_Steph_0796_qywqze.jpg"
+            src="https://res.cloudinary.com/dr9hlxnbp/image/upload/v1765857890/Serra_Plaza_Selects08_toxflm.jpg"
             alt="Grand Central Hall"
             className="editorial-image-wide"
           />
@@ -238,32 +246,29 @@ export default function PrivatePage() {
           >
             <div style={{ display: 'flex', flexDirection: 'column', gap: '40px', maxWidth: '1100px', margin: '0 auto', padding: '0 48px' }}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                <p style={{ opacity: 0.7 }}>14 hours of venue access (10am–midnight)</p>
-                <p style={{ opacity: 0.7 }}>Six distinct spaces including Grand Central Hall, Olive Grove, Courtyard, Foyer, and two VIP suites</p>
-                <p style={{ opacity: 0.7 }}>Farm tables, ghost chairs, and curated lounge furniture</p>
-                <p style={{ opacity: 0.7 }}>Market lights throughout the Olive Grove with architectural uplighting</p>
-                <p style={{ opacity: 0.7 }}>Permanent outdoor kitchen with wood-fired pizza oven and Argentine asado grill</p>
+                <p style={{ opacity: 0.7 }}>Full-day venue access with flexible timing options</p>
+                <p style={{ opacity: 0.7 }}>Four distinct spaces: Grand Plaza Courtyard, Salon Patio, Lounge, and Bridal Suite</p>
+                <p style={{ opacity: 0.7 }}>Tables and chairs for up to 200 guests (additional seating available)</p>
+                <p style={{ opacity: 0.7 }}>Curated collection of vintage furniture and decor pieces</p>
+                <p style={{ opacity: 0.7 }}>Market lighting throughout the courtyard with ambient uplighting</p>
               </div>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', borderTop: '1px solid var(--color-border)', paddingTop: '40px' }}>
                 <p style={{ opacity: 0.7 }}>Professional venue coordinator and event manager</p>
                 <p style={{ opacity: 0.7 }}>Security personnel and setup/breakdown crew</p>
-                <p style={{ opacity: 0.7 }}>On-site parking for 100 vehicles</p>
-                <p style={{ opacity: 0.7 }}>Valet coordination available</p>
+                <p style={{ opacity: 0.7 }}>On-site parking for guests</p>
+                <p style={{ opacity: 0.7 }}>Stone fireplace in Salon Patio and Lounge</p>
               </div>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', borderTop: '1px solid var(--color-border)', paddingTop: '40px' }}>
-                <p style={{ opacity: 0.7 }}>Climate-controlled interior spaces</p>
-                <p style={{ opacity: 0.7 }}>Professional sound system with wireless microphones</p>
-                <p style={{ opacity: 0.7 }}>Complimentary WiFi throughout the venue</p>
-                <p style={{ opacity: 0.7 }}>Full bridal suite and groom's lounge</p>
-              </div>
-
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', borderTop: '1px solid var(--color-border)', paddingTop: '40px' }}>
-                <p style={{ opacity: 0.7 }}>Preferred vendor collective with exclusive rates</p>
+                <p style={{ opacity: 0.7 }}>Complete privacy—one event at a time</p>
                 <p style={{ opacity: 0.7 }}>Complimentary tasting for two with Jay's Catering</p>
-                <p style={{ opacity: 0.7 }}>Access to our curated rental inventory</p>
-                <p style={{ opacity: 0.7 }}>Rehearsal dinner discount available</p>
+                <p style={{ opacity: 0.7 }}>Access to our curated vintage furniture collection</p>
+                <p style={{ opacity: 0.7 }}>Optional drapery for archways and loggias</p>
+              </div>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', borderTop: '1px solid var(--color-border)', paddingTop: '40px' }}>
+                <p style={{ opacity: 0.7 }}>Chandelier and lantern lighting options</p>
               </div>
             </div>
           </motion.div>
@@ -300,13 +305,13 @@ export default function PrivatePage() {
               <h2>Jay's Catering Collection</h2>
               <div className="culinary-paragraphs">
                 <p>
-                  Every event at Grand Gimeno is catered by Jay's Catering Collection—the culinary team that designed and built this venue from the ground up.
+                  Every event at Serra Plaza is exclusively catered by Jay's Catering Collection—the culinary team that transformed this historic property into one of Southern California's most sought-after wedding venues.
                 </p>
                 <p>
-                  The menu is designed around live-fire cooking: wood-fired pizza, Argentine asado, seasonal family-style platters, and curated bar service. This isn't a venue with catering—it's a culinary experience with architecture.
+                  The menu is yours to design: passed appetizers, family-style platters, plated dinners, dessert bars, and full-service beverage programs. Each detail is crafted with the same precision that built this place.
                 </p>
                 <p>
-                  Pricing ranges from $175-$225 per guest depending on menu selection, bar package, and service style. 100-guest minimum.
+                  Pricing averages $100-$175 per guest depending on menu selection, bar package, and service style. Customized proposals available upon request.
                 </p>
               </div>
               <a 
@@ -333,7 +338,7 @@ export default function PrivatePage() {
             className="architecture-header center-aligned"
           >
             <p className="section-eyebrow">
-              <span className="mono">Trusted professionals who know Grand Gimeno.</span>
+              <span className="mono">Trusted professionals who know Serra Plaza.</span>
             </p>
             <h2>Vendor Collective</h2>
           </motion.div>
@@ -373,7 +378,7 @@ export default function PrivatePage() {
           className="editorial-full-height"
         >
           <img 
-            src="https://res.cloudinary.com/dr9hlxnbp/image/upload/v1765813997/jaysTitusandJo-4-2_1_x4l2ou.jpg"
+            src="https://res.cloudinary.com/dr9hlxnbp/image/upload/v1765858082/Serra_Plaza_Selects82_cts9ks.jpg"
             alt="Grand Gimeno"
             className="editorial-full-height-img"
           />
@@ -444,9 +449,9 @@ export default function PrivatePage() {
               <div>
                 <p className="mono" style={{ color: 'var(--color-primary)', marginBottom: '16px' }}>LOCATION</p>
                 <p style={{ fontSize: '1rem', lineHeight: '1.8', color: 'var(--color-charcoal)' }}>
-                  Grand Gimeno<br />
-                  128 West Chapman Avenue<br />
-                  Old Towne Orange, California 92866
+                  Serra Plaza<br />
+                  31910 Del Obispo Street<br />
+                  San Juan Capistrano, California 92675
                 </p>
               </div>
 
@@ -454,7 +459,7 @@ export default function PrivatePage() {
                 <p className="mono" style={{ color: 'var(--color-primary)', marginBottom: '16px' }}>CONTACT</p>
                 <p style={{ fontSize: '1rem', lineHeight: '1.8', color: 'var(--color-charcoal)' }}>
                   <a 
-                    href="tel:+17145551234"
+                    href="tel:+17146360045"
                     style={{ 
                       color: 'var(--color-charcoal)', 
                       textDecoration: 'none',
@@ -463,11 +468,11 @@ export default function PrivatePage() {
                     onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-primary)'}
                     onMouseLeave={(e) => e.currentTarget.style.color = 'var(--color-charcoal)'}
                   >
-                    (714) 555-1234
+                    (714) 636-6045
                   </a>
                   <br />
                   <a 
-                    href="mailto:events@grandgimeno.com"
+                    href="mailto:info@serraplaza.com"
                     style={{ 
                       color: 'var(--color-charcoal)', 
                       textDecoration: 'none',
@@ -476,7 +481,7 @@ export default function PrivatePage() {
                     onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-primary)'}
                     onMouseLeave={(e) => e.currentTarget.style.color = 'var(--color-charcoal)'}
                   >
-                    events@grandgimeno.com
+                    info@serraplaza.com
                   </a>
                 </p>
               </div>
@@ -484,7 +489,7 @@ export default function PrivatePage() {
           </div>
 
           <p style={{ fontSize: '0.75rem', color: 'var(--color-muted)' }}>
-            © {new Date().getFullYear()} Grand Gimeno. All rights reserved.
+            © {new Date().getFullYear()} Serra Plaza. All rights reserved.
           </p>
         </motion.div>
 

@@ -4,9 +4,9 @@ import { ChevronDown } from 'lucide-react';
 import GgLogo from '../components/GgLogo';
 import { initializeTracking } from '../utils/tracking';
 
-const oliveGroveAerial = "https://res.cloudinary.com/dr9hlxnbp/image/upload/v1765780333/3J4A8985_qzhoes.jpg";
-const pizzaOven = "https://res.cloudinary.com/dr9hlxnbp/image/upload/v1765780827/_AJB3193_turfsf.jpg";
-const oliveCeremony = "https://res.cloudinary.com/dr9hlxnbp/image/upload/v1765780355/3J4A0229_cpnpow.jpg";
+const oliveGroveAerial = "https://res.cloudinary.com/dr9hlxnbp/image/upload/v1765857513/Serra_Plaza_Selects14_cfqgng.jpg";
+const pizzaOven = "https://res.cloudinary.com/dr9hlxnbp/image/upload/v1765856956/Serra_Plaza_Selects30_ix3n6x.jpg";
+const oliveCeremony = "https://res.cloudinary.com/dr9hlxnbp/image/upload/v1765856959/Serra_Plaza_Selects86_g5wa6t.jpg";
 
 export default function HomePage() {
   const [showCTA, setShowCTA] = useState(false);
@@ -86,7 +86,7 @@ export default function HomePage() {
         window.hbspt.forms.create({
           region: "na2",
           portalId: "48463492",
-          formId: "83c1be77-a158-4a0a-9938-e04f79ced417",
+          formId: "52e1922c-438e-446b-9845-75bf623b620e",
           target: '#hubspot-form-container',
           onFormSubmitted: () => {
             window.location.href = '/thank-you';
@@ -144,15 +144,15 @@ export default function HomePage() {
           className="hero-content"
         >
           <p className="hero-eyebrow">
-            <span className="mono">Old Towne Orange, California</span>
+            <span className="mono">San Juan Capistrano, California</span>
           </p>
           <h1 className="hero-title">
-            <span className="hero-title-line">Grand</span>
-            <span className="hero-title-line">Gimeno</span>
+            <span className="hero-title-line">Serra</span>
+            <span className="hero-title-line">Plaza</span>
           </h1>
           <p className="hero-subtitle">
-            A 30,000-square-foot Spanish Colonial sanctuary.<br />
-            Built 1928. Architect Harold Gimeno.
+            A Spanish Colonial hidden jewel. Adjacent to Los Rios Historic District.<br />
+            Within walking distance of The Mission.
           </p>
         </motion.div>
 
@@ -174,12 +174,12 @@ export default function HomePage() {
           className="stats-container"
         >
           <div className="stat-item">
-            <p className="stat-main">Up to 300</p>
-            <p className="stat-sub">guests across six spaces</p>
+            <p className="stat-main">Up to 350</p>
+            <p className="stat-sub">guests across four intimate spaces</p>
           </div>
           <div className="stat-item">
-            <p className="stat-main">Two VIP Suites</p>
-            <p className="stat-sub">optional 8am access</p>
+            <p className="stat-main">One Bridal Suite</p>
+            <p className="stat-sub">French-inspired with vintage details</p>
           </div>
           <div className="stat-item">
             <p className="stat-main">Created by</p>
@@ -221,7 +221,7 @@ export default function HomePage() {
             <p className="section-eyebrow">
               <span className="mono">The Architecture</span>
             </p>
-            <h2>A journey through 30,000 square feet</h2>
+            <h2>Old world romance, reimagined</h2>
           </motion.div>
 
           <div className="architecture-grid">
@@ -232,8 +232,8 @@ export default function HomePage() {
               transition={{ duration: 0.8, ease: [0.19, 1, 0.22, 1] }}
               className="architecture-item"
             >
-              <h3>The Courtyard</h3>
-              <p>The arrival point. A lush, open-air space with a large Spanish fountain and arched breezeways.</p>
+              <h3>The Grand Plaza Courtyard</h3>
+              <p>The heart. An open-air sanctuary framed by elegant archways, towering trees, and a bubbling Spanish fountain at center.</p>
             </motion.div>
 
             <motion.div
@@ -243,8 +243,8 @@ export default function HomePage() {
               transition={{ duration: 0.8, ease: [0.19, 1, 0.22, 1], delay: 0.1 }}
               className="architecture-item"
             >
-              <h3>The Foyer</h3>
-              <p>An intimate space with wrought-iron chandeliers and two fireplaces leading to the heart of the building.</p>
+              <h3>The Salon Patio</h3>
+              <p>An intimate gathering space. Stone fireplace, covered loggias, draped archways—ideal for cocktails or ceremony.</p>
             </motion.div>
 
             <motion.div
@@ -254,8 +254,8 @@ export default function HomePage() {
               transition={{ duration: 0.8, ease: [0.19, 1, 0.22, 1], delay: 0.15 }}
               className="architecture-item"
             >
-              <h3>Grand Central</h3>
-              <p>The primary indoor reception space. Soaring 30-foot ceilings, exposed timber trusses, and massive windows. Rustic industrial luxury—no crystal chandeliers here.</p>
+              <h3>The Bridal Suite</h3>
+              <p>French luxury meets Spanish charm. Antique armoire, floor-length mirrors, natural light flooding through expansive windows. Built for getting ready in style.</p>
             </motion.div>
 
             <motion.div
@@ -265,8 +265,8 @@ export default function HomePage() {
               transition={{ duration: 0.8, ease: [0.19, 1, 0.22, 1], delay: 0.2 }}
               className="architecture-item"
             >
-              <h3>The Olive Grove</h3>
-              <p>The crown jewel. A large outdoor sanctuary filled with 100-year-old olive trees, market lights, and decomposed granite floors—designed for al fresco dining.</p>
+              <h3>The Lounge</h3>
+              <p>Indoor and outdoor fireplace. Market lighting overhead. A space that transitions seamlessly from day to night.</p>
             </motion.div>
 
             <motion.div
@@ -276,19 +276,8 @@ export default function HomePage() {
               transition={{ duration: 0.8, ease: [0.19, 1, 0.22, 1], delay: 0.25 }}
               className="architecture-item"
             >
-              <h3>The Suites</h3>
-              <p>Two high-end VIP suites—The Parlor and The Speakeasy—to prepare in style.</p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, ease: [0.19, 1, 0.22, 1], delay: 0.3 }}
-              className="architecture-item"
-            >
-              <h3>The Sanctuary</h3>
-              <p>Enclosed by high walls and greenery, Grand Gimeno creates a silent, private world inside the bustling city of Orange.</p>
+              <h3>The Setting</h3>
+              <p>You can hear the faint sound of trains passing. Swallows fly overhead. Time slows down. This is the oldest neighborhood in California—and it feels like it.</p>
             </motion.div>
           </div>
         </div>
@@ -321,11 +310,11 @@ export default function HomePage() {
               <p className="section-eyebrow">
                 <span className="mono">Culinary Distinction</span>
               </p>
-              <h2>Where architecture meets fire</h2>
+              <h2>Where craft meets celebration</h2>
               <div className="culinary-paragraphs">
-                <p>Grand Gimeno wasn't designed around food—it was designed from food. Created by Jay's Catering, this is a culinary vision made architecture.</p>
-                <p>The permanent outdoor kitchen features an Argentine Asado Grill and a Wood-Fired Pizza Oven, cooking live in front of your guests.</p>
-                <p>Every event becomes a performance of fire, flavor, and craft—orchestrated by the team that built this place.</p>
+                <p>Serra Plaza was designed to be catered by Jay's Catering—the award-winning team behind this venue and five others across Southern California.</p>
+                <p>Every dish is built from scratch, plated with precision, and served with intention. From passed hors d'oeuvres to family-style dinners, the menu is yours to design.</p>
+                <p>This isn't outsourced catering. This is culinary craft that lives in the architecture of the space itself.</p>
               </div>
             </motion.div>
           </div>
@@ -361,21 +350,21 @@ export default function HomePage() {
         >
           <div className="tall-photo-item">
             <img 
-              src="https://res.cloudinary.com/dr9hlxnbp/image/upload/v1765846540/8W6A9496_vndbyv.jpg"
+              src="https://res.cloudinary.com/dr9hlxnbp/image/upload/v1765857628/Serra_Plaza_Selects77_mjjfzm.jpg"
               alt="Grand Gimeno event detail"
               className="tall-photo-img"
             />
           </div>
           <div className="tall-photo-item">
             <img 
-              src="https://res.cloudinary.com/dr9hlxnbp/image/upload/v1765846212/Jennifer_Michael_Wedding_Day_1011_smkp1z.jpg"
+              src="https://res.cloudinary.com/dr9hlxnbp/image/upload/v1765856957/Serra_Plaza_Selects33_oa76ct.jpg"
               alt="Grand Gimeno interior"
               className="tall-photo-img"
             />
           </div>
           <div className="tall-photo-item">
             <img 
-              src="https://res.cloudinary.com/dr9hlxnbp/image/upload/v1765846541/Gimeno_Selects_35_emhokx.jpg"
+              src="https://res.cloudinary.com/dr9hlxnbp/image/upload/v1765856964/Serra_Plaza_Selects84_z7xvdu.jpg"
               alt="Architectural detail"
               className="tall-photo-img"
             />

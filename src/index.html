@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serra Plaza | Luxury Event Space</title>
+    <meta name="description" content="Serra Plaza is a luxury event space offering an unparalleled experience in California." />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://serraplaza.com/" />
+    <meta property="og:title" content="Serra Plaza" />
+    <meta property="og:description" content="A luxury event space designed for unforgettable moments. Editorial elegance meets California warmth." />
+    <meta property="og:image" content="https://res.cloudinary.com/dr9hlxnbp/image/upload/v1765813997/jaysTitusandJo-4-2_1_x4l2ou.jpg" />
+    
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://serraplaza.com/" />
+    <meta property="twitter:title" content="Serra Plaza" />
+    <meta property="twitter:description" content="A luxury event space designed for unforgettable moments. Editorial elegance meets California warmth." />
+    <meta property="twitter:image" content="https://res.cloudinary.com/dr9hlxnbp/image/upload/v1765813997/jaysTitusandJo-4-2_1_x4l2ou.jpg" />
+    
+    <!-- Tracking Scripts -->
+    <!-- 
+      CURRENT: Client-side tracking (standard GA4 + Meta Pixel)
+      READY FOR: Server-side tracking via Stape GTM
+      
+      TO SWITCH TO STAPE:
+      1. Open /config/tracking.ts
+      2. Add your Stape server URL (e.g., 'https://yoursubdomain.stape.io')
+      3. Add your GTM container ID (e.g., 'GTM-XXXXXX')
+      4. Set USE_SERVER_SIDE_TRACKING to true
+      5. Rebuild the app
+      
+      The script URLs below will automatically switch to your Stape server
+      when USE_SERVER_SIDE_TRACKING is enabled.
+    -->
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-260342425"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-260342425');
+    </script>
+    
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '511510642697274');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=511510642697274&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <script>
+      // --- UTILITY FUNCTIONS ---
+      // Function to safely retrieve cookie values
+      function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+        return null;
+      }
+      // Function to get URL parameters (used for GCLID)
+      const urlParams = new URLSearchParams(window.location.search);
+      
+      // --- 1. GATHER ALL IDs (Prioritize Cookie, Fallback to LocalStorage) ---
+      
+      // META IDs
+      let fbcValue = getCookie('_fbc');
+      let fbpValue = getCookie('_fbp');
+
+      // If a cookie is found, save it to localStorage for resilience
+      if (fbcValue) { localStorage.setItem('fbc_backup', fbcValue); }
+      if (fbpValue) { localStorage.setItem('fbp_backup', fbpValue); }
+
+      // If no cookie is found, check localStorage as a fallback
+      if (!fbcValue) { fbcValue = localStorage.getItem('fbc_backup'); }
+      if (!fbpValue) { fbpValue = localStorage.getItem('fbp_backup'); }
+
+      // GOOGLE ID
+      // GCLID is always read from the URL parameter for freshness
+      const gclidValue = urlParams.get('gclid');
+
+
+      // --- 2. INJECT DATA INTO THE RAW HTML FORM ---
+      window.addEventListener('load', function() {
+        // Select the main HubSpot form container
+        const formContainer = document.querySelector('.hs-form'); 
+        
+        if (formContainer) {
+          // META INJECTION
+          const fbcField = formContainer.querySelector('input[name="meta_fbc"]');
+          const fbpField = formContainer.querySelector('input[name="meta_fbp"]');
+
+          if (fbcField && fbcValue) { fbcField.value = fbcValue; }
+          if (fbpField && fbpValue) { fbpField.value = fbpValue; }
+
+          // GOOGLE INJECTION
+          const gclidField = formContainer.querySelector('input[name="gclid"]');
+
+          if (gclidField && gclidValue) { gclidField.value = gclidValue; }
+        }
+      });
+    </script>
+  </body>
+</html>

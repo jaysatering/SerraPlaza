@@ -340,7 +340,7 @@ export default function PrivatePage() {
             <p className="section-eyebrow">
               <span className="mono">Trusted professionals who know Serra Plaza.</span>
             </p>
-            <h2>Vendor Collective</h2>
+            <h2>The List</h2>
           </motion.div>
 
           <motion.div

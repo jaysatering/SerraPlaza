@@ -96,11 +96,8 @@ export default function HomePage() {
               });
             }
             
-            if (window.fbq) {
-              window.fbq('track', 'Lead');
-            }
-            
-            // Let HubSpot handle the redirect - don't do it manually
+            // Meta Lead event will fire on thank-you page (prevents duplicate)
+            // HubSpot handles the redirect - don't do it manually
           }
         });
       }

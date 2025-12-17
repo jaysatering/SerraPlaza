@@ -37,15 +37,12 @@ export default function App() {
     
     // Load HubSpot Tracking Code
     window._hsq = window._hsq || [];
-    (function(d,s,i,r) {
-      if (d.getElementById(i)) return;
-      const n = d.createElement(s);
-      const e = d.getElementsByTagName(s)[0];
-      n.id = i;
-      n.async = true;
-      n.src = 'https://js.hs-scripts.com/' + r + '.js';
-      e.parentNode.insertBefore(n, e);
-    })(document, 'script', 'hs-script-loader', '10024036967634037');
+    const hsScript = document.createElement('script');
+    hsScript.id = 'hs-script-loader';
+    hsScript.async = true;
+    hsScript.defer = true;
+    hsScript.src = 'https://js.hs-scripts.com/10024036967634037.js';
+    document.head.appendChild(hsScript);
     
     console.log('[Tracking] Meta Pixel and HubSpot loaded');
   }, []);

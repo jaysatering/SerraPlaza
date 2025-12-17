@@ -11,6 +11,7 @@ declare global {
     _fbq: any;
     gtag: any;
     dataLayer: any[];
+    _hsq: any[];
   }
 }
 
@@ -33,6 +34,20 @@ export default function App() {
     
     window.fbq('init', '511510642697274');
     window.fbq('track', 'PageView');
+    
+    // Load HubSpot Tracking Code
+    window._hsq = window._hsq || [];
+    (function(d,s,i,r) {
+      if (d.getElementById(i)) return;
+      const n = d.createElement(s);
+      const e = d.getElementsByTagName(s)[0];
+      n.id = i;
+      n.async = true;
+      n.src = 'https://js.hs-scripts.com/' + r + '.js';
+      e.parentNode.insertBefore(n, e);
+    })(document, 'script', 'hs-script-loader', '10024036967634037');
+    
+    console.log('[Tracking] Meta Pixel and HubSpot loaded');
   }, []);
 
   return (

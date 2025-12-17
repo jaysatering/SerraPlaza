@@ -5,32 +5,15 @@ import ThankYouPage from './pages/ThankYouPage';
 import PrivatePage from './pages/PrivatePage';
 import DevNav from './components/DevNav';
 
-declare global {
-  interface Window {
-    fbq: any;
-    _fbq: any;
-    gtag: any;
-    dataLayer: any[];
-    _metaPixelLoaded?: boolean; // Global flag to prevent double-init
-  }
-}
-
 export default function App() {
   const pixelInitialized = useRef(false);
 
   useEffect(() => {
-    // Triple-layer protection against double initialization
-    if (pixelInitialized.current || window.fbq || window._metaPixelLoaded) {
-      console.log('[Meta Pixel] Already initialized - skipping');
-      return;
-    }
-    
-    // Set ALL flags BEFORE loading
+    // Only run once, ever
+    if (pixelInitialized.current) return;
     pixelInitialized.current = true;
-    window._metaPixelLoaded = true;
     
-    console.log('[Meta Pixel] Initializing...');
-    
+    // Load Meta Pixel
     (function(f,b,e,v,n,t,s) {
       if(f.fbq) return;
       n=f.fbq=function(){
@@ -48,9 +31,11 @@ export default function App() {
       s.parentNode.insertBefore(t,s)
     })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
     
-    window.fbq('init', '511510642697274');
+    window.fbq('init', '511510642697274', {
+      autoConfig: false,  // Disable automatic event detection
+      debug: false
+    });
     window.fbq('track', 'PageView');
-    console.log('[Meta Pixel] Initialized successfully');
   }, []);
 
   return (
@@ -63,4 +48,13 @@ export default function App() {
       {/* <DevNav /> */}
     </HashRouter>
   );
+}
+
+declare global {
+  interface Window {
+    fbq: any;
+    _fbq: any;
+    gtag: any;
+    dataLayer: any[];
+  }
 }

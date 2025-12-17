@@ -21,7 +21,7 @@ export default function ThankYouPage() {
     // Fire GA4 conversion event
     if (window.gtag) {
       window.gtag('event', 'conversion', {
-        'send_to': 'G-374937552',
+        'send_to': 'G-2GGX4RHXPR',
         'event_category': 'Form',
         'event_label': 'Serra Plaza Inquiry Submitted'
       });

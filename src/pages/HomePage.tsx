@@ -404,5 +404,7 @@ export default function HomePage() {
 declare global {
   interface Window {
     hbspt: any;
+    gtag: any;
+    fbq: any;
   }
 }

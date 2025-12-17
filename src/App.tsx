@@ -35,13 +35,14 @@ export default function App() {
     window.fbq('init', '511510642697274');
     window.fbq('track', 'PageView');
     
-    // Load HubSpot Tracking Code
+    // Load HubSpot Website Tracking Code
     window._hsq = window._hsq || [];
     const hsScript = document.createElement('script');
     hsScript.id = 'hs-script-loader';
+    hsScript.type = 'text/javascript';
     hsScript.async = true;
     hsScript.defer = true;
-    hsScript.src = 'https://js.hs-scripts.com/10024036967634037.js';
+    hsScript.src = '//js-na2.hs-scripts.com/48463492.js';
     document.head.appendChild(hsScript);
     
     console.log('[Tracking] Meta Pixel and HubSpot loaded');

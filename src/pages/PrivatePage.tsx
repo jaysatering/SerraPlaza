@@ -19,121 +19,114 @@ export default function PrivatePage() {
   const archImageUrl = "https://images.unsplash.com/photo-1762375164298-2f8f14bd8d36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcmNoaXRlY3R1cmFsJTIwZGV0YWlsJTIwYXJjaHxlbnwxfHx8fDE3NjU3ODMyNDV8MA&ixlib=rb-4.1.0&q=80&w=1080";
   const culinaryImageUrl = "https://res.cloudinary.com/dr9hlxnbp/image/upload/v1765856956/Serra_Plaza_Selects16_ix49dm.jpg";
 
-  const faqItems = [
-    {
-      question: "Can we bring our own caterer?",
-      answer: "Serra Plaza was built in partnership with Jay's Catering Collection. All culinary services are provided exclusively by our in-house team to maintain the highest standards of quality, execution, and venue knowledge."
-    },
-    {
-      question: "What is your cancellation policy?",
-      answer: "We require a non-refundable deposit to secure your date. Our full cancellation policy will be provided during your consultation and outlined in your contract."
-    },
-    {
-      question: "Do you allow outside vendors?",
-      answer: "Yes. You are welcome to work with your preferred florist, photographer, DJ, planner, and other vendors. We'll provide a list of preferred partners who are intimately familiar with the venue."
-    },
-    {
-      question: "Is there parking available?",
-      answer: "Yes. Serra Plaza offers ample on-site parking for guests. Additional overflow parking and valet coordination can be arranged if needed."
-    },
-    {
-      question: "Can we see the venue before booking?",
-      answer: "Absolutely. We offer private tours by appointment only. Please submit an inquiry and our venue coordinator will schedule a personalized walkthrough."
-    },
-    {
-      question: "What time can we access the venue?",
-      answer: "Your rental includes flexible timing with setup beginning three hours before your event start time. Events conclude by midnight. Extended hours can be arranged for an additional fee."
-    },
-    {
-      question: "Can we have amplified music or a live band?",
-      answer: "Yes. We welcome live music and DJs. Courtyard events conclude by 10pm due to noise ordinances. Indoor Grand Salon events can continue until midnight."
-    },
-    {
-      question: "What's included in the venue rental?",
-      answer: "Tables and chairs for 200 guests, vintage furniture collection, market lighting, coordinators, security, and complete privacy with one event at a time."
-    }
-  ];
-
   const vendorCollective = [
     {
-      name: "Adore You Events",
-      description: "Full-service planning"
+      name: "A Touch of Lavender",
+      url: "https://atouchoflavender.net/"
     },
     {
-      name: "Blush Botanicals",
-      description: "Seasonal florals"
+      name: "Ah, Love",
+      url: "https://www.ahloveevents.com/"
     },
     {
-      name: "The Simplifiers",
-      description: "Day-of coordination"
+      name: "All in the Detail Design",
+      url: "https://www.aitdd.com/"
     },
     {
-      name: "Honey & Lace Co.",
-      description: "Romantic design"
+      name: "Beloved Events",
+      url: "https://www.belovedeventsco.com/"
     },
     {
-      name: "Maven Made",
-      description: "Strategic planning"
+      name: "Blissful Moments",
+      url: "https://www.blissfulmomentslp.com/"
     },
     {
-      name: "Luna & Wilde",
-      description: "Floral installations"
+      name: "Blush Events",
+      url: "https://blush-events.com/"
     },
     {
-      name: "Alexandra Rose Events",
-      description: "Detail-obsessed planning"
+      name: "Bring the Bubbly Events",
+      url: "https://www.bringthebubblyevents.com/"
     },
     {
-      name: "Studio Bloom OC",
-      description: "Organic florals"
+      name: "Campfire Events",
+      url: "https://www.campfire-events.com/"
     },
     {
-      name: "Vow'd Weddings",
-      description: "Creative direction"
+      name: "De La Planning",
+      url: "https://delaplanning.com/"
     },
     {
-      name: "Salt & Cedar Collective",
-      description: "Minimalist design"
+      name: "Details Darling",
+      url: "https://detailsdarling.com/"
     },
     {
-      name: "The Wildflowers",
-      description: "Garden-inspired florals"
+      name: "Exceptionally Yours Weddings & Events",
+      url: "https://exceptionallyyours.com/"
     },
     {
-      name: "Gather & Gold",
-      description: "Experiential design"
+      name: "Fetelle Designs",
+      url: "https://fetelle.com/"
     },
     {
-      name: "Whispered Whimsy",
-      description: "Romantic planning"
+      name: "Golden Hour Events",
+      url: "https://www.goldenhour-events.com/"
     },
     {
-      name: "Branch & Cole",
-      description: "Sculptural florals"
+      name: "Haus + Company",
+      url: "https://haus353.com/"
     },
     {
-      name: "Noir Events",
-      description: "Editorial planning"
+      name: "Intertwined",
+      url: "https://intertwinedevents.com/"
     },
     {
-      name: "Wild Heart Events",
-      description: "Bohemian luxury"
+      name: "Joyfully Co",
+      url: "https://www.joyfullyco.com/"
     },
     {
-      name: "Kaleidoscope Weddings",
-      description: "Colorful design"
+      name: "Mele Amore",
+      url: "https://www.meleamore.com/"
     },
     {
-      name: "Poppy & Vine Co.",
-      description: "Seasonal florals"
+      name: "Modest Magnolia",
+      url: "https://modestmagnolia.com/"
     },
     {
-      name: "Sterling Social",
-      description: "Modern planning"
+      name: "Now & Forever Love",
+      url: "http://www.nowandforeverlove.com/"
     },
     {
-      name: "Celadon & Celery",
-      description: "Botanical design"
+      name: "Palm & Pine Events",
+      url: "https://www.palmandpineevents.com/"
+    },
+    {
+      name: "Peonies & Bliss Events",
+      url: "https://www.peoniesandblissevents.com/"
+    },
+    {
+      name: "Pop the Champagne",
+      url: "https://popthechampagneevents.com/"
+    },
+    {
+      name: "Pure Lavish",
+      url: "https://eventsbypurelavish.com/"
+    },
+    {
+      name: "Sage Event Planning",
+      url: "https://www.sageeventplanning.com/"
+    },
+    {
+      name: "The Fete Collective",
+      url: "https://www.thefetecollective.com/"
+    },
+    {
+      name: "Unoaked. Event design & production",
+      url: "https://unoakedevents.com/"
+    },
+    {
+      name: "White Blossom Events",
+      url: "https://www.instagram.com/whiteblossomevents/"
     }
   ];
 
@@ -162,7 +155,7 @@ export default function PrivatePage() {
             <span className="mono">Private Venue Profile</span>
           </p>
           <h1 className="hero-title">
-            <span className="hero-title-line">The Plaza</span>
+            <span className="hero-title-line">The Dream</span>
             <span className="hero-title-line">Is Yours.</span>
           </h1>
         </motion.div>
@@ -196,7 +189,14 @@ export default function PrivatePage() {
 
             <div className="pricing-row-item">
               <span className="mono" style={{ color: 'var(--color-primary)', marginBottom: '8px', display: 'block' }}>SATURDAY</span>
+              <span className="pricing-value">$10,000</span>
+              <span className="mono" style={{ fontSize: '0.625rem', color: 'var(--color-charcoal)', marginTop: '4px', display: 'block', opacity: 0.7 }}>JAN - AUG</span>
+            </div>
+
+            <div className="pricing-row-item">
+              <span className="mono" style={{ color: 'var(--color-primary)', marginBottom: '8px', display: 'block' }}>SATURDAY</span>
               <span className="pricing-value">$11,000</span>
+              <span className="mono" style={{ fontSize: '0.625rem', color: 'var(--color-charcoal)', marginTop: '4px', display: 'block', opacity: 0.7 }}>SEPT - DEC</span>
             </div>
 
             <div className="pricing-row-item">
@@ -235,7 +235,7 @@ export default function PrivatePage() {
             <p className="section-eyebrow">
               <span className="mono">INCLUSIONS</span>
             </p>
-            <h2>The design spec</h2>
+            <h2>The logistics</h2>
           </motion.div>
 
           <motion.div
@@ -302,16 +302,17 @@ export default function PrivatePage() {
               <p className="section-eyebrow">
                 <span className="mono">Culinary Experience</span>
               </p>
-              <h2>Jay's Catering Collection</h2>
+              <h2>Jay's Catering</h2>
               <div className="culinary-paragraphs">
                 <p>
-                  Every event at Serra Plaza is exclusively catered by Jay's Catering Collection—the culinary team that transformed this historic property into one of Southern California's most sought-after wedding venues.
+                  Every event at Grand Gimeno begins with Jay's Catering. The culinary team who imagined this space—and built it around food.
                 </p>
                 <p>
-                  The menu is yours to design: passed appetizers, family-style platters, plated dinners, dessert bars, and full-service beverage programs. Each detail is crafted with the same precision that built this place.
+                  The menu lives in fire: wood-fired pizza, Argentine asado, handmade hors d'oeuvres. Abundant buffets or curated plates. Indulgent desserts. A bar, perfectly crafted. This is not a venue with catering—it's a culinary experience with architecture.
                 </p>
                 <p>
-                  Pricing averages $100-$175 per guest depending on menu selection, bar package, and service style. Customized proposals available upon request.
+                  <strong>Pricing</strong><br />
+                  Dependent on guest count, event length, menu, and service style. 75-guest minimum. Let us create your custom proposal.
                 </p>
               </div>
               <a 
@@ -359,9 +360,14 @@ export default function PrivatePage() {
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.6, delay: index * 0.02 }}
                 >
-                  <p className="vendor-name">
+                  <a 
+                    href={vendor.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="vendor-name"
+                  >
                     {vendor.name}
-                  </p>
+                  </a>
                 </motion.div>
               ))}
             </div>
@@ -383,46 +389,6 @@ export default function PrivatePage() {
             className="editorial-full-height-img"
           />
         </motion.div>
-      </section>
-
-      <section className="architecture-section" style={{ paddingBottom: 'var(--space-section)' }}>
-        <div className="container-content">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, ease: [0.19, 1, 0.22, 1] }}
-            className="architecture-header"
-          >
-            <p className="section-eyebrow">
-              <span className="mono">Questions</span>
-            </p>
-            <h2>Frequently asked</h2>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, ease: [0.19, 1, 0.22, 1], delay: 0.1 }}
-            style={{ padding: '0 48px', maxWidth: '1100px', margin: '0 auto' }}
-          >
-            {faqItems.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.6, delay: index * 0.05 }}
-              >
-                <AccordionSingle
-                  question={item.question}
-                  answer={item.answer}
-                />
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
       </section>
 
       <footer style={{ 

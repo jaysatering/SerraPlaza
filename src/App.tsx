@@ -55,7 +55,7 @@ export default function App() {
         <Route path="/thank-you" element={<ThankYouPage />} />
         <Route path="/private" element={<PrivatePage />} />
       </Routes>
-      {/* <DevNav /> */}
+      <DevNav />
     </HashRouter>
   );
 }

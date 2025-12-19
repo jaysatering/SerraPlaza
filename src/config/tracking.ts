@@ -1,21 +1,18 @@
 /**
  * Tracking Configuration
  * 
- * UPDATE THESE VALUES WHEN STAPE IS READY:
- * 1. Set STAPE_SERVER_URL to your Stape server domain (e.g., 'https://yoursubdomain.stape.io' or custom domain)
- * 2. Set GTM_CONTAINER_ID to your Google Tag Manager container ID (e.g., 'GTM-XXXXXX')
- * 3. Set USE_SERVER_SIDE_TRACKING to true
+ * Serra Plaza tracking via Stape server-side GTM
  */
 
 export const TRACKING_CONFIG = {
   // Server-Side Tracking (Stape)
-  USE_SERVER_SIDE_TRACKING: false, // Set to true when Stape is ready
-  STAPE_SERVER_URL: '', // e.g., 'https://yoursubdomain.stape.io' or 'https://tracking.yourdomain.com'
-  GTM_CONTAINER_ID: '', // e.g., 'GTM-XXXXXX'
+  USE_SERVER_SIDE_TRACKING: true,
+  STAPE_SERVER_URL: 'https://tracking.jayscatering.com',
+  GTM_CONTAINER_ID: 'GTM-TJG6R99K',
   
-  // Client-Side Tracking (Current Setup)
+  // Client-Side Tracking (Serra Plaza specific IDs)
   META_PIXEL_ID: '511510642697274',
-  GA4_MEASUREMENT_ID: 'G-374937552',
+  GA4_MEASUREMENT_ID: 'G-2GGX4RHXPR',
 };
 
 /**

@@ -12,6 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
     
+    <!-- Adobe Fonts - Masqualero -->
+    <link rel="stylesheet" href="https://use.typekit.net/dec0qbs.css">
+    
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://serraplaza.com/" />
@@ -26,91 +29,47 @@
     <meta property="twitter:image" content="https://res.cloudinary.com/dr9hlxnbp/image/upload/v1765813997/jaysTitusandJo-4-2_1_x4l2ou.jpg" />
     
     <!-- Tracking Scripts -->
-    <!-- 
-      CURRENT: Client-side tracking (standard GA4 + Meta Pixel)
-      READY FOR: Server-side tracking via Stape GTM
-      
-      TO SWITCH TO STAPE:
-      1. Open /config/tracking.ts
-      2. Add your Stape server URL (e.g., 'https://yoursubdomain.stape.io')
-      3. Add your GTM container ID (e.g., 'GTM-XXXXXX')
-      4. Set USE_SERVER_SIDE_TRACKING to true
-      5. Rebuild the app
-      
-      The script URLs below will automatically switch to your Stape server
-      when USE_SERVER_SIDE_TRACKING is enabled.
-    -->
+    <!-- GTM is now loaded via React component (GTMLoader.tsx) for reliable deployment -->
     
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GGX4RHXPR"></script>
+    <!-- HubSpot Form Auto-Fill for UTM & Click ID Tracking -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-2GGX4RHXPR', {
-        'linker': {
-          'domains': ['lp.serraplaza.com', 'serraplaza.com', 'serraplazaevents.com', 'jayscatering.com']
+    window.addEventListener('message', function(event) {
+        if (event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormReady') {
+            var form = document.querySelector('form[data-form-id="' + event.data.id + '"]');
+            
+            function getCookie(name) {
+                var match = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
+                return match ? match.pop() : '';
+            }
+
+            var urlParams = new URLSearchParams(window.location.search);
+            
+            var tracking = {
+                'utm_source': urlParams.get('utm_source'),
+                'utm_medium': urlParams.get('utm_medium'),
+                'utm_campaign': urlParams.get('utm_campaign'),
+                'utm_content': urlParams.get('utm_content'),
+                'utm_term': urlParams.get('utm_term'),
+                'gclid': urlParams.get('gclid'),
+                'fbc': getCookie('_fbc') || (urlParams.get('fbclid') ? 'fb.1.' + Date.now() + '.' + urlParams.get('fbclid') : ''),
+                'fbp': getCookie('_fbp')
+            };
+
+            for (var key in tracking) {
+                if (tracking[key]) {
+                    var input = form.querySelector('input[name="' + key + '"]');
+                    if (input) {
+                        input.value = tracking[key];
+                        input.dispatchEvent(new Event('input', { bubbles: true }));
+                    }
+                }
+            }
         }
-      });
+    });
     </script>
-    
-    <!-- Meta Pixel Code -->
-    <!-- Pixel loaded in App.tsx to work properly with HashRouter -->
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    
-    <script>
-      // --- UTILITY FUNCTIONS ---
-      // Function to safely retrieve cookie values
-      function getCookie(name) {
-        const value = `; ${document.cookie}`;
-        const parts = value.split(`; ${name}=`);
-        if (parts.length === 2) return parts.pop().split(';').shift();
-        return null;
-      }
-      // Function to get URL parameters (used for GCLID)
-      const urlParams = new URLSearchParams(window.location.search);
-      
-      // --- 1. GATHER ALL IDs (Prioritize Cookie, Fallback to LocalStorage) ---
-      
-      // META IDs
-      let fbcValue = getCookie('_fbc');
-      let fbpValue = getCookie('_fbp');
-
-      // If a cookie is found, save it to localStorage for resilience
-      if (fbcValue) { localStorage.setItem('fbc_backup', fbcValue); }
-      if (fbpValue) { localStorage.setItem('fbp_backup', fbpValue); }
-
-      // If no cookie is found, check localStorage as a fallback
-      if (!fbcValue) { fbcValue = localStorage.getItem('fbc_backup'); }
-      if (!fbpValue) { fbpValue = localStorage.getItem('fbp_backup'); }
-
-      // GOOGLE ID
-      // GCLID is always read from the URL parameter for freshness
-      const gclidValue = urlParams.get('gclid');
-
-
-      // --- 2. INJECT DATA INTO THE RAW HTML FORM ---
-      window.addEventListener('load', function() {
-        // Select the main HubSpot form container
-        const formContainer = document.querySelector('.hs-form'); 
-        
-        if (formContainer) {
-          // META INJECTION
-          const fbcField = formContainer.querySelector('input[name="meta_fbc"]');
-          const fbpField = formContainer.querySelector('input[name="meta_fbp"]');
-
-          if (fbcField && fbcValue) { fbcField.value = fbcValue; }
-          if (fbpField && fbpValue) { fbpField.value = fbpValue; }
-
-          // GOOGLE INJECTION
-          const gclidField = formContainer.querySelector('input[name="gclid"]');
-
-          if (gclidField && gclidValue) { gclidField.value = gclidValue; }
-        }
-      });
-    </script>
   </body>
 </html>

@@ -92,7 +92,7 @@ export default function HomePage() {
             console.log('✅ Serra Plaza Landing Page - Form loaded');
           },
           onFormSubmit: function($form) {
-            // Fire Meta Pixel
+            // Fire Meta Pixel custom event
             if (window.fbq) {
               window.fbq('trackCustom', 'FormSubmit_SerraPlaza_LP', {
                 content_name: 'Serra Plaza Landing Page Form',
@@ -102,16 +102,13 @@ export default function HomePage() {
               });
             }
             
-            // Fire GTM dataLayer
-            if (window.dataLayer) {
-              window.dataLayer.push({
-                'event': 'form_submission',
-                'form_name': 'Serra Plaza Landing Page',
-                'form_id': '52e1922c-438e-446b-9845-75bf623b620e',
-                'venue': 'Serra Plaza',
-                'form_location': 'Landing Page'
-              });
-            }
+            // Fire GTM dataLayer event
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+              event: 'form_submit',
+              form_name: 'Serra Plaza Contact Form',
+              venue_name: 'Serra Plaza'
+            });
             
             console.log('✅ Serra Plaza Landing Page - Form submitted, redirecting to thank you page...');
           }

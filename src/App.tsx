@@ -12,6 +12,7 @@ declare global {
     gtag: any;
     dataLayer: any[];
     _hsq: any[];
+    hbspt: any;
   }
 }
 
@@ -22,6 +23,9 @@ export default function App() {
     // Simple guard: only run once
     if (initialized.current) return;
     initialized.current = true;
+    
+    // Initialize dataLayer for GTM (safe even if GTM not loaded)
+    window.dataLayer = window.dataLayer || [];
     
     // Load Meta Pixel (simple version)
     (function(f,b,e,v,n,t,s) {

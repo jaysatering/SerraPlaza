@@ -270,6 +270,10 @@
 }
 
 @layer utilities {
+  .fixed {
+    position: fixed;
+  }
+
   .relative {
     position: relative;
   }
@@ -365,6 +369,10 @@
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+
+  .paused {
+    animation-play-state: paused;
   }
 }
 
@@ -1557,15 +1565,6 @@ p {
   }
 }
 
-.form-medallion {
-  background-color: var(--color-primary);
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  margin: 0 auto 24px;
-  display: none;
-}
-
 @media (width >= 1024px) {
   .form-medallion {
     width: 64px;
@@ -1961,5 +1960,85 @@ button:focus-visible {
 @media (width >= 1024px) {
   .inclusions-content-text {
     font-size: 1.125rem;
+  }
+}
+
+.logistics-section {
+  padding: var(--space-section-mobile) 0;
+  background-color: var(--color-ivory);
+}
+
+@media (width >= 1024px) {
+  .logistics-section {
+    padding: var(--space-section) 0;
+  }
+}
+
+.logistics-header {
+  max-width: var(--container-content);
+  margin: 0 auto 48px;
+  padding: 0 24px;
+}
+
+@media (width >= 1024px) {
+  .logistics-header {
+    margin-bottom: 64px;
+    padding: 0 80px;
+  }
+}
+
+.logistics-header h2 {
+  margin-top: 16px;
+}
+
+@media (width >= 1024px) {
+  .logistics-header h2 {
+    margin-top: 24px;
+  }
+}
+
+.logistics-content {
+  max-width: var(--container-content);
+  flex-direction: column;
+  gap: 24px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+}
+
+@media (width >= 1024px) {
+  .logistics-content {
+    gap: 32px;
+    padding: 0 80px;
+  }
+}
+
+.logistics-content p {
+  color: var(--color-charcoal);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+@media (width >= 1024px) {
+  .logistics-content p {
+    font-size: 1.25rem;
+  }
+}
+
+.form-medallion {
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 24px;
+  display: none;
+}
+
+@media (width >= 1024px) {
+  .form-medallion {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 32px;
+    display: block;
   }
 }

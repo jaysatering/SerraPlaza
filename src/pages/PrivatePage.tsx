@@ -246,29 +246,28 @@ export default function PrivatePage() {
           >
             <div style={{ display: 'flex', flexDirection: 'column', gap: '40px', maxWidth: '1100px', margin: '0 auto', padding: '0 48px' }}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                <p style={{ opacity: 0.7 }}>Full-day venue access with flexible timing options</p>
-                <p style={{ opacity: 0.7 }}>Four distinct spaces: Grand Plaza Courtyard, Salon Patio, Lounge, and Bridal Suite</p>
-                <p style={{ opacity: 0.7 }}>Tables and chairs for up to 200 guests (additional seating available)</p>
-                <p style={{ opacity: 0.7 }}>Curated collection of vintage furniture and decor pieces</p>
-                <p style={{ opacity: 0.7 }}>Market lighting throughout the courtyard with ambient uplighting</p>
+                <p>Five and a half hours for your event. Four hours to set the scene. One hour to close the chapter.</p>
+                <p>Four distinct spaces: The Courtyard. The Lounge. The Hidden Terrace. A VIP suite—private, quiet, yours.</p>
+                <p>Round dining tables. 250 ghost chairs. More tables used as you need.</p>
               </div>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', borderTop: '1px solid var(--color-border)', paddingTop: '40px' }}>
-                <p style={{ opacity: 0.7 }}>Professional venue coordinator and event manager</p>
-                <p style={{ opacity: 0.7 }}>Security personnel and setup/breakdown crew</p>
-                <p style={{ opacity: 0.7 }}>On-site parking for guests</p>
-                <p style={{ opacity: 0.7 }}>Stone fireplace in Salon Patio and Lounge</p>
+                <p>The focal point: a bubbling Spanish fountain.</p>
+                <p>Market lights strung through the Courtyard. Optional chandeliers for added sparkle.</p>
+                <p>Billowing drapery in each archway for a soft, intimate focus.</p>
+                <p>Dual-facing fireplace: artisan tile warming the Lounge, stone outdoors on the Hidden Terrace.</p>
               </div>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', borderTop: '1px solid var(--color-border)', paddingTop: '40px' }}>
-                <p style={{ opacity: 0.7 }}>Complete privacy—one event at a time</p>
-                <p style={{ opacity: 0.7 }}>Complimentary tasting for two with Jay's Catering</p>
-                <p style={{ opacity: 0.7 }}>Access to our curated vintage furniture collection</p>
-                <p style={{ opacity: 0.7 }}>Optional drapery for archways and loggias</p>
+                <p>An experienced team: venue representative, catering manager, security, and setup crew.</p>
+                <p>The List—our trusted vendor partners, with exclusive offerings for your day.</p>
               </div>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', borderTop: '1px solid var(--color-border)', paddingTop: '40px' }}>
-                <p style={{ opacity: 0.7 }}>Chandelier and lantern lighting options</p>
+                <p>A luxury suite, apartment-style. Optional early access at 8am.</p>
+                <p>On-site parking.</p>
+                <p>Rehearsal dinner discounts across The Collection.</p>
+                <p>And two seats at A Taste of Jay's—on us.</p>
               </div>
             </div>
           </motion.div>
@@ -300,15 +299,15 @@ export default function PrivatePage() {
               className="culinary-text"
             >
               <p className="section-eyebrow">
-                <span className="mono">Culinary Experience</span>
+                <span className="mono">JAY'S CATERING</span>
               </p>
-              <h2>Jay's Catering</h2>
+              <h2>The Experience</h2>
               <div className="culinary-paragraphs">
                 <p>
-                  Every event at Grand Gimeno begins with Jay's Catering. The culinary team who imagined this space—and built it around food.
+                  Every event at Serra Plaza begins with Jay's Catering. The culinary team who imagined this space—and built it around food.
                 </p>
                 <p>
-                  The menu lives in fire: wood-fired pizza, Argentine asado, handmade hors d'oeuvres. Abundant buffets or curated plates. Indulgent desserts. A bar, perfectly crafted. This is not a venue with catering—it's a culinary experience with architecture.
+                  The menu lives in intention: Handmade hors d'oeuvres. Abundant buffets or curated plates. Indulgent desserts. A bar, perfectly crafted. This is not a venue with catering—it's a culinary experience with architecture.
                 </p>
                 <p>
                   <strong>Pricing</strong><br />

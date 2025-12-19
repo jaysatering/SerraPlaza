@@ -1675,3 +1675,86 @@ button:focus-visible {
     font-size: 1.125rem;
   }
 }
+
+/* ===== LOGISTICS SECTION ===== */
+.logistics-section {
+  padding: var(--space-section-mobile) 0;
+  background-color: var(--color-ivory);
+}
+
+@media (min-width: 1024px) {
+  .logistics-section {
+    padding: var(--space-section) 0;
+  }
+}
+
+.logistics-header {
+  max-width: var(--container-content);
+  margin: 0 auto;
+  padding: 0 24px;
+  margin-bottom: 48px;
+}
+
+@media (min-width: 1024px) {
+  .logistics-header {
+    padding: 0 80px;
+    margin-bottom: 64px;
+  }
+}
+
+.logistics-header h2 {
+  margin-top: 16px;
+}
+
+@media (min-width: 1024px) {
+  .logistics-header h2 {
+    margin-top: 24px;
+  }
+}
+
+.logistics-content {
+  max-width: var(--container-content);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (min-width: 1024px) {
+  .logistics-content {
+    padding: 0 80px;
+    gap: 32px;
+  }
+}
+
+.logistics-content p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--color-charcoal);
+}
+
+@media (min-width: 1024px) {
+  .logistics-content p {
+    font-size: 1.25rem;
+  }
+}
+
+/* ===== FORM MEDALLION ===== */
+.form-medallion {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 24px auto;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .form-medallion {
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin-bottom: 32px;
+  }
+}

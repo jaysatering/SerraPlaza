@@ -6,7 +6,7 @@ import { initializeTracking } from '../utils/tracking';
 
 const oliveGroveAerial = "https://res.cloudinary.com/dr9hlxnbp/image/upload/v1765859034/Serra_Plaza_Selects82_ebhc0o.jpg";
 const pizzaOven = "https://res.cloudinary.com/dr9hlxnbp/image/upload/v1765856956/Serra_Plaza_Selects30_ix3n6x.jpg";
-const oliveCeremony = "https://res.cloudinary.com/dr9hlxnbp/image/upload/v1765856959/Serra_Plaza_Selects86_g5wa6t.jpg";
+const oliveCeremony = "https://res.cloudinary.com/dr9hlxnbp/image/upload/v1766169496/Pasanella-Wedding-Reception-VibyCreative-29_z1ojls.jpg";
 
 export default function HomePage() {
   const [showCTA, setShowCTA] = useState(false);
@@ -173,7 +173,7 @@ export default function HomePage() {
           </h1>
           <p className="hero-subtitle">
             A Spanish Colonial hidden jewel. Adjacent to Los Rios Historic District.<br />
-            Within walking distance of The Mission.
+            A neighborhood paused in time.
           </p>
         </motion.div>
 
@@ -196,11 +196,11 @@ export default function HomePage() {
         >
           <div className="stat-item">
             <p className="stat-main">Up to 350</p>
-            <p className="stat-sub">guests across four intimate spaces</p>
+            <p className="stat-sub">guests across four dreamy spaces</p>
           </div>
           <div className="stat-item">
-            <p className="stat-main">One Bridal Suite</p>
-            <p className="stat-sub">French-inspired with vintage details</p>
+            <p className="stat-main">Walking Distance</p>
+            <p className="stat-sub">to The Mission San Juan Capistrano</p>
           </div>
           <div className="stat-item">
             <p className="stat-main">Created by</p>
@@ -253,8 +253,8 @@ export default function HomePage() {
               transition={{ duration: 0.8, ease: [0.19, 1, 0.22, 1] }}
               className="architecture-item"
             >
-              <h3>The Grand Plaza Courtyard</h3>
-              <p>The heart. An open-air sanctuary framed by elegant archways, towering trees, and a bubbling Spanish fountain at center.</p>
+              <h3>The Courtyard</h3>
+              <p>The heart. An open-air sanctuary framed by draped archways, towering trees, and a bubbling Spanish fountain at center.</p>
             </motion.div>
 
             <motion.div
@@ -264,8 +264,8 @@ export default function HomePage() {
               transition={{ duration: 0.8, ease: [0.19, 1, 0.22, 1], delay: 0.1 }}
               className="architecture-item"
             >
-              <h3>The Salon Patio</h3>
-              <p>An intimate gathering space. Stone fireplace, covered loggias, draped archways—ideal for cocktails or ceremony.</p>
+              <h3>The Lounge</h3>
+              <p>Artisan tiles, arched alcoves, and exposed wooden beams. A space that transitions seamlessly from day to night.</p>
             </motion.div>
 
             <motion.div
@@ -275,8 +275,8 @@ export default function HomePage() {
               transition={{ duration: 0.8, ease: [0.19, 1, 0.22, 1], delay: 0.15 }}
               className="architecture-item"
             >
-              <h3>The Bridal Suite</h3>
-              <p>French luxury meets Spanish charm. Antique armoire, floor-length mirrors, natural light flooding through expansive windows. Built for getting ready in style.</p>
+              <h3>The Hidden Terrace</h3>
+              <p>An intimate gathering space. Stone fireplace, market lighting overhead—ideal for cocktails and conversation.</p>
             </motion.div>
 
             <motion.div
@@ -286,8 +286,8 @@ export default function HomePage() {
               transition={{ duration: 0.8, ease: [0.19, 1, 0.22, 1], delay: 0.2 }}
               className="architecture-item"
             >
-              <h3>The Lounge</h3>
-              <p>Indoor and outdoor fireplace. Market lighting overhead. A space that transitions seamlessly from day to night.</p>
+              <h3>The Bridal Suite</h3>
+              <p>A space for quiet luxury. Custom vanities for styling, refreshments within reach, lounges for a breath before the celebration.</p>
             </motion.div>
 
             <motion.div
@@ -333,9 +333,9 @@ export default function HomePage() {
               </p>
               <h2>Where craft meets celebration</h2>
               <div className="culinary-paragraphs">
-                <p>Serra Plaza was designed to be catered by Jay's Catering—the award-winning team behind this venue and five others across Southern California.</p>
-                <p>Every dish is built from scratch, plated with precision, and served with intention. From passed hors d'oeuvres to family-style dinners, the menu is yours to design.</p>
-                <p>This isn't outsourced catering. This is culinary craft that lives in the architecture of the space itself.</p>
+                <p>Serra Plaza was created by the culinary and event experts of Jay's Catering.</p>
+                <p>Every dish is imagined with intention, plated with precision, and served with care. From crafted hors d'oeuvres to unforgettable dinners, the menu is yours to design.</p>
+                <p>This isn't banquet food. This is culinary artistry woven into the space itself—where flavor and design live side by side.</p>
               </div>
             </motion.div>
           </div>
@@ -378,14 +378,14 @@ export default function HomePage() {
           </div>
           <div className="tall-photo-item">
             <img 
-              src="https://res.cloudinary.com/dr9hlxnbp/image/upload/v1765856957/Serra_Plaza_Selects33_oa76ct.jpg"
+              src="https://res.cloudinary.com/dr9hlxnbp/image/upload/v1765856961/Serra_Plaza_Selects92_dhdntb.jpg"
               alt="Grand Gimeno interior"
               className="tall-photo-img"
             />
           </div>
           <div className="tall-photo-item">
             <img 
-              src="https://res.cloudinary.com/dr9hlxnbp/image/upload/v1765856964/Serra_Plaza_Selects84_z7xvdu.jpg"
+              src="https://res.cloudinary.com/dr9hlxnbp/image/upload/v1766169491/JSTN7462_flcocf.jpg"
               alt="Architectural detail"
               className="tall-photo-img"
             />

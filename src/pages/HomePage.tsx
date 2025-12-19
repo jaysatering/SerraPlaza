@@ -88,16 +88,32 @@ export default function HomePage() {
           portalId: "48463492",
           formId: "52e1922c-438e-446b-9845-75bf623b620e",
           target: '#hubspot-form-container',
-          onFormSubmitted: () => {
-            // Fire conversion tracking events
-            if (window.gtag) {
-              window.gtag('event', 'conversion', {
-                'send_to': 'G-2GGX4RHXPR'
+          onFormReady: function($form) {
+            console.log('✅ Serra Plaza Landing Page - Form loaded');
+          },
+          onFormSubmit: function($form) {
+            // Fire Meta Pixel
+            if (window.fbq) {
+              window.fbq('trackCustom', 'FormSubmit_SerraPlaza_LP', {
+                content_name: 'Serra Plaza Landing Page Form',
+                content_category: 'Venue Inquiry',
+                venue: 'Serra Plaza',
+                source: 'Landing Page'
               });
             }
             
-            // Meta Lead event will fire on thank-you page (prevents duplicate)
-            // HubSpot handles the redirect - don't do it manually
+            // Fire GTM dataLayer
+            if (window.dataLayer) {
+              window.dataLayer.push({
+                'event': 'form_submission',
+                'form_name': 'Serra Plaza Landing Page',
+                'form_id': '52e1922c-438e-446b-9845-75bf623b620e',
+                'venue': 'Serra Plaza',
+                'form_location': 'Landing Page'
+              });
+            }
+            
+            console.log('✅ Serra Plaza Landing Page - Form submitted, redirecting to thank you page...');
           }
         });
       }
@@ -403,5 +419,6 @@ declare global {
     hbspt: any;
     gtag: any;
     fbq: any;
+    dataLayer: any;
   }
 }

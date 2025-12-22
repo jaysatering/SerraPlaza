@@ -9,15 +9,6 @@ export default function ThankYouPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
     
-    // Generate unique event ID for deduplication between browser pixel and CAPI
-    const eventID = 'lead_' + Date.now() + '_' + Math.random().toString(36).substring(7);
-    
-    // Fire Meta Pixel Lead event
-    if (window.fbq) {
-      window.fbq('track', 'Lead', {}, { eventID: eventID });
-      console.log('[Tracking] Meta Pixel Lead event fired with Event ID:', eventID);
-    }
-    
     // Fire GA4 conversion event
     if (window.gtag) {
       window.gtag('event', 'conversion', {

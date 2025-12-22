@@ -92,16 +92,6 @@ export default function HomePage() {
             console.log('✅ Serra Plaza Landing Page - Form loaded');
           },
           onFormSubmit: function($form) {
-            // Fire Meta Pixel custom event
-            if (window.fbq) {
-              window.fbq('trackCustom', 'FormSubmit_SerraPlaza_LP', {
-                content_name: 'Serra Plaza Landing Page Form',
-                content_category: 'Venue Inquiry',
-                venue: 'Serra Plaza',
-                source: 'Landing Page'
-              });
-            }
-            
             // Fire GTM dataLayer event
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({

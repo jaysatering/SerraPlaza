@@ -75,6 +75,9 @@ export default function HomePage() {
   }, [hasScrolled]);
 
   useEffect(() => {
+    // 1. Generate Master ID (Unique Receipt Number)
+    const masterEventId = 'serra_lp_' + new Date().getTime() + '_' + Math.floor(Math.random() * 10000);
+
     const script = document.createElement('script');
     script.src = '//js-na2.hsforms.net/forms/embed/v2.js';
     script.charset = 'utf-8';
@@ -88,19 +91,83 @@ export default function HomePage() {
           portalId: "48463492",
           formId: "52e1922c-438e-446b-9845-75bf623b620e",
           target: '#hubspot-form-container',
+          
           onFormReady: function($form) {
-            console.log('✅ Serra Plaza Landing Page - Form loaded');
+            console.log('✅ Serra Plaza LP - Form Loaded with ID:', masterEventId);
+
+            // --- A. GET TRACKING DATA ---
+            const urlParams = new URLSearchParams(window.location.search);
+            const sessionData = JSON.parse(sessionStorage.getItem('hubspot_tracking_data') || '{}');
+
+            const getVal = (p, k) => urlParams.get(p) || sessionData[k || p] || '';
+            const getCookie = (n) => { const m = document.cookie.match('(^|;)\\s*' + n + '\\s*=\\s*([^;]+)'); return m ? m.pop() : ''; };
+
+            const trackingData = {
+              'utm_source': getVal('utm_source'),
+              'utm_medium': getVal('utm_medium'),
+              'utm_campaign': getVal('utm_campaign'),
+              'utm_content': getVal('utm_content', 'custom_utm_content'),
+              'utm_term': getVal('utm_term', 'custom_utm_term'),
+              'gclid': getVal('gclid'),
+              'fbc': getCookie('_fbc') || getVal('meta_fbc'),
+              'fbp': getCookie('_fbp') || getVal('meta_fbp'),
+              'event_id': masterEventId,
+              'landing_page': window.location.href,
+              'referrer_url': document.referrer
+            };
+
+            // --- B. SAVE SESSION (Persist Data) ---
+            sessionStorage.setItem('hubspot_tracking_data', JSON.stringify({
+              utm_source: trackingData.utm_source,
+              utm_medium: trackingData.utm_medium,
+              utm_campaign: trackingData.utm_campaign,
+              custom_utm_content: trackingData.utm_content,
+              custom_utm_term: trackingData.utm_term,
+              gclid: trackingData.gclid,
+              meta_fbc: trackingData.fbc,
+              meta_fbp: trackingData.fbp
+            }));
+
+            // --- C. FILL HIDDEN FIELDS ---
+            const mapping = {
+              'utm_source': trackingData.utm_source,
+              'utm_medium': trackingData.utm_medium,
+              'utm_campaign': trackingData.utm_campaign,
+              'custom_utm_content': trackingData.utm_content,
+              'custom_utm_term': trackingData.utm_term,
+              'gclid': trackingData.gclid,
+              'meta_fbc': trackingData.fbc,
+              'meta_fbp': trackingData.fbp,
+              'event_id': trackingData.event_id,
+              'landing_page': trackingData.landing_page,
+              'referrer_url': trackingData.referrer_url
+            };
+
+            for (const key in mapping) {
+              if (mapping[key]) {
+                const input = $form.querySelector('input[name="' + key + '"]');
+                if (input) {
+                  input.value = mapping[key];
+                  input.dispatchEvent(new Event('change', { bubbles: true }));
+                }
+              }
+            }
           },
+
           onFormSubmit: function($form) {
-            // Fire GTM dataLayer event
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({
-              event: 'form_submit',
-              form_name: 'Serra Plaza Contact Form',
-              venue_name: 'Serra Plaza'
-            });
+            const emailInput = $form.querySelector('input[name="email"]');
+            const emailVal = emailInput ? emailInput.value : '';
             
-            console.log('✅ Serra Plaza Landing Page - Form submitted, redirecting to thank you page...');
+            // 🔥 Fire GTM Event (One Perfect Lead)
+            if (window.dataLayer) {
+              window.dataLayer.push({
+                'event': 'hubspot_form_success',
+                'form_name': 'Serra Plaza Landing Page',
+                'hs-form-email': emailVal,
+                'lead_event_id': masterEventId 
+              });
+            }
+            console.log('✅ Serra Plaza LP - Submitted. Event ID:', masterEventId);
           }
         });
       }
@@ -108,9 +175,7 @@ export default function HomePage() {
     
     document.body.appendChild(script);
     return () => {
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
-      }
+      if (document.body.contains(script)) { document.body.removeChild(script); }
     };
   }, []);
 

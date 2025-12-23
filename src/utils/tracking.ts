@@ -34,7 +34,7 @@ function getQueryParam(param: string): string | null {
  * Generate a unique event ID for CAPI deduplication
  */
 function generateEventId(): string {
-  return `gg_${Date.now()}_${Math.random().toString(36).substring(2, 11)}`;
+  return `serra_lp_${Date.now()}_${Math.random().toString(36).substring(2, 11)}`;
 }
 
 /**

@@ -7,6 +7,10 @@ export default function ThankYouPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    document.title = "Serra Plaza | Thank You";
+  }, []);
+
+  useEffect(() => {
     window.scrollTo(0, 0);
     
     // Fire GA4 conversion event

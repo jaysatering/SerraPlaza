@@ -75,6 +75,10 @@ export default function HomePage() {
   }, [hasScrolled]);
 
   useEffect(() => {
+    document.title = "Serra Plaza | Inquiry";
+  }, []);
+
+  useEffect(() => {
     // 1. Generate Master ID (Unique Receipt Number)
     const masterEventId = 'serra_lp_' + new Date().getTime() + '_' + Math.floor(Math.random() * 10000);
 

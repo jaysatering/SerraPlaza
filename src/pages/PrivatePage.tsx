@@ -7,6 +7,10 @@ import { AccordionSingle } from '../components/Accordion';
 
 export default function PrivatePage() {
   useEffect(() => {
+    document.title = "Serra Plaza | Private Access";
+  }, []);
+
+  useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
